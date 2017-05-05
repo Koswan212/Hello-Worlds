@@ -1,2 +1,4 @@
 # Hello-Worlds
-Baru belajar repositori
+Perkenalkan nama saya Aa Koswan
+saya tinggal di Kota Ketapang Kalimantan Barat
+
