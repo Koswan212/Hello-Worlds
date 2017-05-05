@@ -166,7 +166,19 @@ function editMessageText($chatid, $message_id, $text, $keyboard = [], $inline = 
     : $data['reply_markup'] = json_encode($replyMarkup);
     $result = apiRequest($method, $data);
 }
- 
+
+function sendApiHideKeyboard($chatid, $text)
+{
+    $method = 'sendMessage';
+    $data = [
+        'chat_id'       => $chatid,
+        'text'          => $text,
+        'parse_mode'    => 'Markdown',
+        'reply_markup'  => json_encode(['hide_keyboard' => true]),
+    ];
+    $result = apiRequest($method, $data);
+}
+
 // hapus baris dibawah ini, jika tidak dihapus berarti kamu kurang teliti!
 // die("Mohon diteliti ulang codingnya..\nERROR: Hapus baris atau beri komen line ini yak!\n");
  
